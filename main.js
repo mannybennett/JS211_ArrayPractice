@@ -41,12 +41,15 @@ pets.unshift('turtle')
 console.log(pets)
 
 let numbers = [23, 45, 0 , 2, 8, 44, 100, 1, 3, 91, 34]
-const addTwo = (num, index, arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        if (i === index) {
-            return arr[i] = num + 2;
-        }
-    }
+const addTwo = (num) => {
+    return num + 2
 }
-numbers.forEach(addTwo)
-console.log(numbers)
+// numbers.map(addTwo)
+console.log(numbers.map(addTwo))
+
+let numModified = []
+const addTwoMap = (num) => {
+    numModified.push(num + 2) 
+}
+numbers.forEach(addTwoMap)
+console.log(numModified)
